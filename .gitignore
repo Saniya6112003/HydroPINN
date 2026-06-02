@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+
+# Large model outputs (not needed for web hosting)
+outputs/flood_frames/frame_*.npy
+outputs/flood_frames/all_h.npy
+outputs/*.pt
+outputs/risk_map.npy
+outputs/uncertainty_map.npy
+outputs/flood_map.html
+
+# Data files (regenerate with scripts)
+data/terrain/dem.npy
+data/rainfall/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

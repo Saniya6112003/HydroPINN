@@ -1,0 +1,155 @@
+# -*- coding: utf-8 -*-
+"""
+Run this once after training to bake all model outputs into data.js
+so index.html works with zero backend.
+
+Usage:
+    python webapp/export_data.py
+    # Then open webapp/static/index.html in a browser
+    # OR: cd webapp/static && python -m http.server 5000
+"""
+import os, sys, json, math
+import numpy as np
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
+OUT  = os.path.join(ROOT, "outputs")
+DEST = os.path.join(ROOT, "webapp", "static", "data.js")
+
+def load(rel):
+    p = os.path.join(OUT, rel)
+    return np.load(p) if os.path.exists(p) else None
+
+# ── load everything ───────────────────────────────────────────────────────────
+print("Loading outputs...")
+all_h       = load(os.path.join("flood_frames", "all_h.npy"))
+risk_map    = load("risk_map.npy")
+unc_map     = load("uncertainty_map.npy")
+
+evac_path   = os.path.join(OUT, "evacuation_path.json")
+evac        = json.load(open(evac_path)) if os.path.exists(evac_path) else []
+
+# ── flood summary ─────────────────────────────────────────────────────────────
+if all_h is not None:
+    all_h   = all_h.astype(np.float32)
+    peak_h  = all_h.max(axis=0)
+    max_d   = float(all_h.max())
+    peak_t  = int(np.argmax(all_h.max(axis=(1,2))))
+    peak_hr = round(peak_t * 24 / (all_h.shape[0]-1), 1)
+    aff_pct = round(float((peak_h > 0.3).mean() * 100), 1)
+
+    # GPS heatmap points (every cell with depth > 0.05m)
+    LAT0, LAT1 = 18.905, 19.285
+    LON0, LON1 = 72.790, 72.960
+    G = peak_h.shape[0]
+    heat_pts = []
+    for r in range(G):
+        for c in range(G):
+            h = float(peak_h[r, c])
+            if h > 0.05:
+                lat = LAT0 + (r/(G-1))*(LAT1-LAT0)
+                lon = LON0 + (c/(G-1))*(LON1-LON0)
+                heat_pts.append([round(lat,5), round(lon,5), round(h,3)])
+
+    # round frame data to 3 dp to keep file small
+    frames_rounded = [[[round(v,3) for v in row] for row in frame]
+                      for frame in all_h.tolist()]
+    # export peak_h for route flood-depth lookup in JS
+    peak_h_export = [[round(float(v),3) for v in row] for row in peak_h.tolist()]
+else:
+    max_d = peak_hr = aff_pct = 0
+    frames_rounded = []
+    heat_pts = []
+    peak_h_export = []
+
+# ── risk map ──────────────────────────────────────────────────────────────────
+if risk_map is not None:
+    risk_map  = risk_map.astype(int)
+    total     = risk_map.size
+    r_counts  = {str(i): int((risk_map==i).sum()) for i in range(4)}
+    r_pcts    = {k: round(v/total*100,1) for k,v in r_counts.items()}
+    risk_grid = risk_map.tolist()
+else:
+    r_counts = r_pcts = {}
+    risk_grid = []
+
+# ── uncertainty ───────────────────────────────────────────────────────────────
+if unc_map is not None:
+    unc_map  = unc_map.astype(np.float32)
+    unc_grid = [[round(v,4) for v in row] for row in unc_map.tolist()]
+    unc_max  = round(float(unc_map.max()),4)
+    unc_mean = round(float(unc_map.mean()),4)
+else:
+    unc_grid = []
+    unc_max  = unc_mean = 0
+
+# ── comparison results ────────────────────────────────────────────────────────
+comp = {}
+try:
+    from comparison.compare import run_comparison
+    res = run_comparison()
+    for k, v in res.items():
+        if isinstance(v, np.ndarray):
+            comp[k] = [[round(x,3) for x in row] for row in v.tolist()]
+        elif isinstance(v, (float, np.floating)):
+            comp[k] = round(float(v), 4)
+        else:
+            comp[k] = v
+    print(f"  Comparison: PINN PDE={comp.get('pde_residual_pinn','?'):.2f} | Plain={comp.get('pde_residual_plain','?'):.2f}")
+except Exception as e:
+    print(f"  Comparison skipped: {e}")
+
+# ── all evacuation routes ─────────────────────────────────────────────────────
+all_routes = {}
+try:
+    from routing.evacuate import compute_evacuation
+    for loc in ["Santacruz", "Dharavi", "Khar"]:
+        wps = compute_evacuation(start_preset=loc, save=False)
+        all_routes[loc] = wps
+    print(f"  Routes: {', '.join(f'{k}={len(v)}pts' for k,v in all_routes.items())}")
+except Exception as e:
+    print(f"  Routes skipped: {e}")
+
+# ── write data.js ─────────────────────────────────────────────────────────────
+os.makedirs(os.path.dirname(DEST), exist_ok=True)
+
+data = {
+    "flood": {
+        "frames":        frames_rounded,
+        "peak_h":        peak_h_export,
+        "shape":         list(all_h.shape) if all_h is not None else [],
+        "max_depth":     round(max_d, 3),
+        "peak_time_hr":  peak_hr,
+        "affected_pct":  aff_pct,
+    },
+    "heatmap": {
+        "points":    heat_pts,
+        "max_depth": round(max_d, 3),
+    },
+    "risk": {
+        "grid":   risk_grid,
+        "counts": r_counts,
+        "pcts":   r_pcts,
+    },
+    "uncertainty": {
+        "grid": unc_grid,
+        "max":  unc_max,
+        "mean": unc_mean,
+    },
+    "evacuation": evac,
+    "all_routes":  all_routes,
+    "comparison":  comp,
+}
+
+js_content = "// Auto-generated by export_data.py — do not edit manually\nconst APP_DATA = " + json.dumps(data, separators=(',',':')) + ";\n"
+with open(DEST, "w", encoding="utf-8") as f:
+    f.write(js_content)
+
+size_kb = os.path.getsize(DEST) / 1024
+print(f"\nWritten: {DEST}")
+print(f"Size:    {size_kb:.0f} KB")
+print(f"\nPeak flood depth : {max_d:.2f} m")
+print(f"Peak time        : {peak_hr} hr")
+print(f"Affected area    : {aff_pct}%")
+print(f"\nOpen webapp/static/index.html in browser")
+print("or run:  cd webapp/static && python -m http.server 5000")
