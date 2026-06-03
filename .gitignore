@@ -26,3 +26,7 @@ data/rainfall/
 # OS
 .DS_Store
 Thumbs.db
+
+# Private docs
+*.pdf
+*Blueprint*.md
