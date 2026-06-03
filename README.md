@@ -1,93 +1,126 @@
 # HydroPINN — Mumbai 2005 Flood Prediction AI
 
-A **Physics-Informed Neural Network (PINN)** that predicts flood depth, risk zones, and safe evacuation routes for the 26 July 2005 Mumbai flood (944mm/24hr, 400+ deaths, $1B damage).
+A physics-informed flood forecasting system for the 26 July 2005 Mumbai disaster. HydroPINN combines a deep neural model with the Shallow Water Equations to predict flood depth, risk zones, and safe evacuation routes across a real-world urban terrain.
 
 ## Live Demo
-🌊 **[View Live App](https://hydropinn.netlify.app)**
 
-## Results
-| Metric | PINN | Plain NN | Winner |
-|--------|------|----------|--------|
-| Test R² | 0.9895 | 0.9903 | **Tied** |
-| MAE | 0.037m | 0.031m | Close |
-| Mass Conservation (PDE) | **0.0066** | 2.2042 | **PINN +99.7%** |
-| Peak flood depth | **2.60m** | lower | **PINN (realistic)** |
+🌊 [View the live app](https://hydropinn.netlify.app)
 
-## What it does
-- **Flood simulation** — 3D animated predictions for 20 timesteps (0–24hr)
-- **Risk zones** — Safe / Moderate / High / Danger classification across Mumbai
-- **Safe route finder** — Real road routes (OSRM) colour-coded by flood depth
-- **PINN vs Plain NN** — 6-tab scientific comparison showing physics advantage
-- **Model deep dive** — Architecture, flow fields, PDE residuals, sensitivity analysis
+## Overview
 
-## Architecture
+HydroPINN is built to demonstrate how physics-informed neural networks can improve flood modeling by enforcing hydrodynamic conservation laws.
+
+Key capabilities:
+
+- Accurate flood depth prediction over time
+- Spatial flood-risk classification
+- Real road evacuation routing using OSRM
+- Scientific comparison of PINN vs. standard neural network
+- Web-enabled visualization and interactive exploration
+
+## Highlights
+
+| Metric                   | PINN       | Plain NN | Result                                  |
+| ------------------------ | ---------- | -------- | --------------------------------------- |
+| Test R²                  | 0.9895     | 0.9903   | Tied                                    |
+| MAE                      | 0.037 m    | 0.031 m  | Comparable accuracy                     |
+| Mass conservation error  | **0.0066** | 2.2042   | PINN is far more physically consistent  |
+| Peak flood depth realism | 2.60 m     | lower    | PINN better matches observed hydraulics |
+
+## Features
+
+- **Physics-informed flood simulation** using the Shallow Water Equations
+- **Risk zoning** for safe, moderate, high, and danger areas
+- **Evacuation route planning** on real street networks
+- **Comparative benchmarking** between PINN and plain NN models
+- **Interactive dashboard** and export-ready web visualization
+
+## Technical approach
+
+HydroPINN predicts water depth `h` and velocity components `u, v` from
+terrain, rainfall, and spatio-temporal inputs.
+
+Model details:
+
+- Input: `[x, y, t, z(terrain), R(rainfall)]`
+- Architecture: 6 layers × 128 neurons, `tanh` activation, 10% dropout
+- Outputs: `h` (via `softplus` to ensure non-negative depth), `u`, `v`
+- Loss: `5.0 × L_data + 0.05 × L_pde + 0.005 × L_bc`
+- Training: data-only warmup → combined PINN training → L-BFGS refinement
+
+## Physics formulation
+
+The network enforces the Shallow Water Equations through differentiable PyTorch residuals:
+
+- Continuity: `∂h/∂t + ∂(hu)/∂x + ∂(hv)/∂y = R`
+- x-momentum: `∂(hu)/∂t + ∂(hu² + ½ g h²)/∂x = −g h ∂z/∂x`
+- y-momentum: `∂(hv)/∂t + ∂(hv² + ½ g h²)/∂y = −g h ∂z/∂y`
+
+## Project structure
+
+```text
+HydroPINN/
+├── model/          # PINN architecture, physics loss, training
+├── data/           # terrain and rainfall generation
+├── inference/      # prediction, risk zones, uncertainty
+├── routing/        # evacuation routing over roads
+├── comparison/     # PINN vs plain NN benchmarks
+├── dashboard/      # Streamlit analysis app
+└── webapp/         # web export and visualization tools
+    └── static/     # deployable app assets
 ```
-Input: [x, y, t, z(terrain), R(rainfall)]
-       ↓
-6 × 128 neurons — tanh activation — 10% Dropout
-       ↓
-Output: h (softplus, always ≥ 0), u (velocity x), v (velocity y)
 
-Loss = 5.0 × L_data + 0.05 × L_pde(scaled continuity) + 0.005 × L_bc
-Training: 2000 epoch data-only warmup → 2000 epoch combined → 500 step L-BFGS
-```
+## Quick start
 
-## Run locally
+### Install dependencies
 
-### Prerequisites
 ```bash
 pip install torch numpy scipy matplotlib plotly streamlit networkx scikit-learn tqdm folium flask flask-cors
 ```
 
-### Train & run
+### Generate data
+
 ```bash
-# 1. Generate terrain & rainfall data
 python data/terrain/generate_dem.py
 python data/rainfall/generate_rainfall.py
+```
 
-# 2. Train PINN (~15 min on CPU)
+### Train the model
+
+```bash
 python -c "from model.train import train; train(adam_epochs=4000, lbfgs_steps=500, lambda_data=5.0, lambda_pde=0.05, lambda_bc=0.005)"
+```
 
-# 3. Run inference pipeline
+### Run inference
+
+```bash
 python inference/predict.py
 python inference/risk_zones.py
 python inference/uncertainty.py
 python routing/evacuate.py
 python comparison/plain_nn.py
 python comparison/compare.py
+```
 
-# 4. Export to web & serve
+### Export for the web
+
+```bash
 python webapp/export_data.py
 python webapp/analyze_model.py
 python webapp/compare_detailed.py
 cd webapp/static && python -m http.server 5000
-# Open http://localhost:5000
 ```
 
-## Project structure
-```
-HydroPINN/
-├── model/          # PINN architecture, physics loss, training
-├── data/           # Terrain (NASA SRTM) + rainfall generation
-├── inference/      # Prediction, risk zones, uncertainty (MC Dropout)
-├── routing/        # Dijkstra evacuation routing
-├── comparison/     # PINN vs Plain NN benchmarks
-├── dashboard/      # Streamlit app (alternative UI)
-└── webapp/
-    ├── static/     # ← Deploy this folder (index.html + data JS)
-    ├── server.py   # Flask backend (optional)
-    ├── export_data.py
-    ├── analyze_model.py
-    └── compare_detailed.py
-```
-
-## Physics
-The PINN satisfies the **Shallow Water Equations (SWE)**:
-- Continuity: `∂h/∂t + ∂(hu)/∂x + ∂(hv)/∂y = R`
-- x-momentum: `∂(hu)/∂t + ∂(hu² + ½gh²)/∂x = −g·h·∂z/∂x`
-- y-momentum: `∂(hv)/∂t + ∂(hv² + ½gh²)/∂y = −g·h·∂z/∂y`
-
-Derivatives are computed via PyTorch autograd through the network, making the SWE residual differentiable and directly minimisable as a loss term.
+Open `http://localhost:5000` to explore the generated visualizations.
 
 ## Tech stack
-PyTorch · NumPy · Folium · OSRM · Leaflet.js · Plotly.js · NASA SRTM · OpenStreetMap
+
+PyTorch · NumPy · SciPy · Folium · OSRM · Leaflet.js · Plotly.js · OpenStreetMap
+
+## Why it matters
+
+HydroPINN demonstrates how physics-aware machine learning can produce not only accurate flood forecasts, but also physically plausible and actionable outputs for urban resilience.
+
+## License
+
+This repository is provided for research and demonstration purposes.
