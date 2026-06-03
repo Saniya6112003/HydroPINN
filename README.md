@@ -6,6 +6,10 @@ A physics-informed flood forecasting system for the 26 July 2005 Mumbai disaster
 
 🌊 [View the live app](https://hydropinn.netlify.app)
 
+![HydroPINN demo hero page](demo_screenshot_hero.png)
+
+![HydroPINN simulation preview](demo_screenshot_sim.png)
+
 ## Overview
 
 HydroPINN is built to demonstrate how physics-informed neural networks can improve flood modeling by enforcing hydrodynamic conservation laws.
@@ -17,6 +21,12 @@ Key capabilities:
 - Real road evacuation routing using OSRM
 - Scientific comparison of PINN vs. standard neural network
 - Web-enabled visualization and interactive exploration
+
+## Core strengths
+
+- **Physics-informed modeling** — PINN enforces the Shallow Water Equations to improve physical realism and generalization.
+- **Real-world Mumbai data** — uses real terrain and rainfall inputs to model a high-impact urban flood scenario.
+- **Actionable evacuation routing** — integrates safe road routing for flooded areas, making the output practical for disaster response.
 
 ## Highlights
 
@@ -120,6 +130,14 @@ PyTorch · NumPy · SciPy · Folium · OSRM · Leaflet.js · Plotly.js · OpenSt
 ## Why it matters
 
 HydroPINN demonstrates how physics-aware machine learning can produce not only accurate flood forecasts, but also physically plausible and actionable outputs for urban resilience.
+
+## 🤝 Connect & Collaborate
+
+I'm Saniya, the developer behind this project. I’m passionate about deploying useful machine learning tools and welcome your engagement.
+
+- Developer: **Saniya Randive**
+- Contribute: Found a bug or have an idea for a feature? Please open an Issue or submit a Pull Request in this repository.
+- Let's connect: [LinkedIn](https://www.linkedin.com/in/saniya-randive374628/)
 
 ## License
 
