@@ -1,0 +1,1172 @@
+[
+  {
+    "x": 0.5079,
+    "y": 0.6508,
+    "row": 41,
+    "col": 32,
+    "h": 2.5784,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.6667,
+    "row": 42,
+    "col": 32,
+    "h": 2.577,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.6825,
+    "row": 43,
+    "col": 32,
+    "h": 2.5741,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.6984,
+    "row": 44,
+    "col": 32,
+    "h": 2.5757,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.7143,
+    "row": 45,
+    "col": 32,
+    "h": 2.5803,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.7302,
+    "row": 46,
+    "col": 32,
+    "h": 2.5678,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.746,
+    "row": 47,
+    "col": 32,
+    "h": 2.5642,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.7619,
+    "row": 48,
+    "col": 32,
+    "h": 2.5366,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.7778,
+    "row": 49,
+    "col": 32,
+    "h": 2.4854,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.7937,
+    "row": 50,
+    "col": 32,
+    "h": 2.4224,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.8095,
+    "row": 51,
+    "col": 32,
+    "h": 2.2806,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.8254,
+    "row": 52,
+    "col": 32,
+    "h": 2.0873,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.8413,
+    "row": 53,
+    "col": 32,
+    "h": 1.8988,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.8571,
+    "row": 54,
+    "col": 32,
+    "h": 1.7535,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.873,
+    "row": 55,
+    "col": 32,
+    "h": 1.6273,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.8889,
+    "row": 56,
+    "col": 32,
+    "h": 1.5068,
+    "risk_level": 3,
+    "risk_label": "Danger"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.9048,
+    "row": 57,
+    "col": 32,
+    "h": 1.395,
+    "risk_level": 2,
+    "risk_label": "High"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.9206,
+    "row": 58,
+    "col": 32,
+    "h": 1.289,
+    "risk_level": 2,
+    "risk_label": "High"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.9365,
+    "row": 59,
+    "col": 32,
+    "h": 1.1882,
+    "risk_level": 2,
+    "risk_label": "High"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.9524,
+    "row": 60,
+    "col": 32,
+    "h": 1.0914,
+    "risk_level": 2,
+    "risk_label": "High"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.9683,
+    "row": 61,
+    "col": 32,
+    "h": 0.998,
+    "risk_level": 2,
+    "risk_label": "High"
+  },
+  {
+    "x": 0.5079,
+    "y": 0.9841,
+    "row": 62,
+    "col": 32,
+    "h": 0.9089,
+    "risk_level": 2,
+    "risk_label": "High"
+  },
+  {
+    "x": 0.5079,
+    "y": 1.0,
+    "row": 63,
+    "col": 32,
+    "h": 0.8248,
+    "risk_level": 2,
+    "risk_label": "High"
+  },
+  {
+    "x": 0.5238,
+    "y": 1.0,
+    "row": 63,
+    "col": 33,
+    "h": 0.8225,
+    "risk_level": 2,
+    "risk_label": "High"
+  },
+  {
+    "x": 0.5397,
+    "y": 1.0,
+    "row": 63,
+    "col": 34,
+    "h": 0.8179,
+    "risk_level": 2,
+    "risk_label": "High"
+  },
+  {
+    "x": 0.5556,
+    "y": 1.0,
+    "row": 63,
+    "col": 35,
+    "h": 0.8112,
+    "risk_level": 2,
+    "risk_label": "High"
+  },
+  {
+    "x": 0.5714,
+    "y": 1.0,
+    "row": 63,
+    "col": 36,
+    "h": 0.8022,
+    "risk_level": 2,
+    "risk_label": "High"
+  },
+  {
+    "x": 0.5873,
+    "y": 1.0,
+    "row": 63,
+    "col": 37,
+    "h": 0.7912,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.6032,
+    "y": 1.0,
+    "row": 63,
+    "col": 38,
+    "h": 0.7781,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.619,
+    "y": 1.0,
+    "row": 63,
+    "col": 39,
+    "h": 0.763,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.6349,
+    "y": 1.0,
+    "row": 63,
+    "col": 40,
+    "h": 0.7461,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.6508,
+    "y": 1.0,
+    "row": 63,
+    "col": 41,
+    "h": 0.7272,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.6667,
+    "y": 1.0,
+    "row": 63,
+    "col": 42,
+    "h": 0.7066,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.6825,
+    "y": 1.0,
+    "row": 63,
+    "col": 43,
+    "h": 0.6844,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.6984,
+    "y": 1.0,
+    "row": 63,
+    "col": 44,
+    "h": 0.6606,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.7143,
+    "y": 1.0,
+    "row": 63,
+    "col": 45,
+    "h": 0.6357,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.7302,
+    "y": 1.0,
+    "row": 63,
+    "col": 46,
+    "h": 0.6102,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.746,
+    "y": 1.0,
+    "row": 63,
+    "col": 47,
+    "h": 0.5845,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.7619,
+    "y": 1.0,
+    "row": 63,
+    "col": 48,
+    "h": 0.5592,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.7778,
+    "y": 1.0,
+    "row": 63,
+    "col": 49,
+    "h": 0.5348,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.7937,
+    "y": 1.0,
+    "row": 63,
+    "col": 50,
+    "h": 0.5116,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.8095,
+    "y": 1.0,
+    "row": 63,
+    "col": 51,
+    "h": 0.4895,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.8254,
+    "y": 1.0,
+    "row": 63,
+    "col": 52,
+    "h": 0.4684,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.8413,
+    "y": 1.0,
+    "row": 63,
+    "col": 53,
+    "h": 0.4478,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.8571,
+    "y": 1.0,
+    "row": 63,
+    "col": 54,
+    "h": 0.4274,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.873,
+    "y": 1.0,
+    "row": 63,
+    "col": 55,
+    "h": 0.4067,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.8889,
+    "y": 1.0,
+    "row": 63,
+    "col": 56,
+    "h": 0.3855,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.9048,
+    "y": 1.0,
+    "row": 63,
+    "col": 57,
+    "h": 0.3639,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.9206,
+    "y": 1.0,
+    "row": 63,
+    "col": 58,
+    "h": 0.3422,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.9365,
+    "y": 1.0,
+    "row": 63,
+    "col": 59,
+    "h": 0.3208,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.9524,
+    "y": 1.0,
+    "row": 63,
+    "col": 60,
+    "h": 0.3005,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.9683,
+    "y": 1.0,
+    "row": 63,
+    "col": 61,
+    "h": 0.284,
+    "risk_level": 0,
+    "risk_label": "Safe"
+  },
+  {
+    "x": 0.9841,
+    "y": 1.0,
+    "row": 63,
+    "col": 62,
+    "h": 0.2711,
+    "risk_level": 0,
+    "risk_label": "Safe"
+  },
+  {
+    "x": 1.0,
+    "y": 1.0,
+    "row": 63,
+    "col": 63,
+    "h": 0.2693,
+    "risk_level": 0,
+    "risk_label": "Safe"
+  },
+  {
+    "x": 1.0,
+    "y": 0.9841,
+    "row": 62,
+    "col": 63,
+    "h": 0.2743,
+    "risk_level": 0,
+    "risk_label": "Safe"
+  },
+  {
+    "x": 1.0,
+    "y": 0.9683,
+    "row": 61,
+    "col": 63,
+    "h": 0.291,
+    "risk_level": 0,
+    "risk_label": "Safe"
+  },
+  {
+    "x": 1.0,
+    "y": 0.9524,
+    "row": 60,
+    "col": 63,
+    "h": 0.3127,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.9365,
+    "row": 59,
+    "col": 63,
+    "h": 0.3376,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.9206,
+    "row": 58,
+    "col": 63,
+    "h": 0.3632,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.9048,
+    "row": 57,
+    "col": 63,
+    "h": 0.3889,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.8889,
+    "row": 56,
+    "col": 63,
+    "h": 0.4142,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.873,
+    "row": 55,
+    "col": 63,
+    "h": 0.4388,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.8571,
+    "row": 54,
+    "col": 63,
+    "h": 0.4627,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.8413,
+    "row": 53,
+    "col": 63,
+    "h": 0.4864,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.8254,
+    "row": 52,
+    "col": 63,
+    "h": 0.5102,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.8095,
+    "row": 51,
+    "col": 63,
+    "h": 0.5343,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.7937,
+    "row": 50,
+    "col": 63,
+    "h": 0.5588,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.7778,
+    "row": 49,
+    "col": 63,
+    "h": 0.5834,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.7619,
+    "row": 48,
+    "col": 63,
+    "h": 0.6078,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.746,
+    "row": 47,
+    "col": 63,
+    "h": 0.6316,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.7302,
+    "row": 46,
+    "col": 63,
+    "h": 0.6542,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.7143,
+    "row": 45,
+    "col": 63,
+    "h": 0.6753,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.6984,
+    "row": 44,
+    "col": 63,
+    "h": 0.6944,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.6825,
+    "row": 43,
+    "col": 63,
+    "h": 0.7112,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.6667,
+    "row": 42,
+    "col": 63,
+    "h": 0.7257,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.6508,
+    "row": 41,
+    "col": 63,
+    "h": 0.7375,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.6349,
+    "row": 40,
+    "col": 63,
+    "h": 0.7467,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.619,
+    "row": 39,
+    "col": 63,
+    "h": 0.7531,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.6032,
+    "row": 38,
+    "col": 63,
+    "h": 0.7568,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.5873,
+    "row": 37,
+    "col": 63,
+    "h": 0.7576,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.5714,
+    "row": 36,
+    "col": 63,
+    "h": 0.7557,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.5556,
+    "row": 35,
+    "col": 63,
+    "h": 0.7512,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.5397,
+    "row": 34,
+    "col": 63,
+    "h": 0.744,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.5238,
+    "row": 33,
+    "col": 63,
+    "h": 0.7344,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.5079,
+    "row": 32,
+    "col": 63,
+    "h": 0.7225,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.4921,
+    "row": 31,
+    "col": 63,
+    "h": 0.7087,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.4762,
+    "row": 30,
+    "col": 63,
+    "h": 0.6931,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.4603,
+    "row": 29,
+    "col": 63,
+    "h": 0.6763,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.4444,
+    "row": 28,
+    "col": 63,
+    "h": 0.6585,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.4286,
+    "row": 27,
+    "col": 63,
+    "h": 0.6402,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.4127,
+    "row": 26,
+    "col": 63,
+    "h": 0.6215,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.3968,
+    "row": 25,
+    "col": 63,
+    "h": 0.6027,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.381,
+    "row": 24,
+    "col": 63,
+    "h": 0.5837,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.3651,
+    "row": 23,
+    "col": 63,
+    "h": 0.5644,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.3492,
+    "row": 22,
+    "col": 63,
+    "h": 0.5446,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.3333,
+    "row": 21,
+    "col": 63,
+    "h": 0.5239,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.3175,
+    "row": 20,
+    "col": 63,
+    "h": 0.5022,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.3016,
+    "row": 19,
+    "col": 63,
+    "h": 0.4796,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.2857,
+    "row": 18,
+    "col": 63,
+    "h": 0.4567,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.2698,
+    "row": 17,
+    "col": 63,
+    "h": 0.4342,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.254,
+    "row": 16,
+    "col": 63,
+    "h": 0.4135,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.2381,
+    "row": 15,
+    "col": 63,
+    "h": 0.3966,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.2222,
+    "row": 14,
+    "col": 63,
+    "h": 0.3912,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.2063,
+    "row": 13,
+    "col": 63,
+    "h": 0.3916,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.1905,
+    "row": 12,
+    "col": 63,
+    "h": 0.3917,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.1746,
+    "row": 11,
+    "col": 63,
+    "h": 0.3914,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.1587,
+    "row": 10,
+    "col": 63,
+    "h": 0.3907,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.1429,
+    "row": 9,
+    "col": 63,
+    "h": 0.39,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.127,
+    "row": 8,
+    "col": 63,
+    "h": 0.3893,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.1111,
+    "row": 7,
+    "col": 63,
+    "h": 0.3889,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 1.0,
+    "y": 0.0952,
+    "row": 6,
+    "col": 63,
+    "h": 0.3892,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.9841,
+    "y": 0.0952,
+    "row": 6,
+    "col": 62,
+    "h": 0.3896,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.9683,
+    "y": 0.0952,
+    "row": 6,
+    "col": 61,
+    "h": 0.3901,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.9524,
+    "y": 0.0952,
+    "row": 6,
+    "col": 60,
+    "h": 0.3907,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.9365,
+    "y": 0.0952,
+    "row": 6,
+    "col": 59,
+    "h": 0.3913,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.9365,
+    "y": 0.0794,
+    "row": 5,
+    "col": 59,
+    "h": 0.3919,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.9206,
+    "y": 0.0794,
+    "row": 5,
+    "col": 58,
+    "h": 0.3924,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.9048,
+    "y": 0.0794,
+    "row": 5,
+    "col": 57,
+    "h": 0.3929,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.8889,
+    "y": 0.0794,
+    "row": 5,
+    "col": 56,
+    "h": 0.3935,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.873,
+    "y": 0.0794,
+    "row": 5,
+    "col": 55,
+    "h": 0.3941,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.8571,
+    "y": 0.0794,
+    "row": 5,
+    "col": 54,
+    "h": 0.395,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.8571,
+    "y": 0.0635,
+    "row": 4,
+    "col": 54,
+    "h": 0.3956,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.8413,
+    "y": 0.0635,
+    "row": 4,
+    "col": 53,
+    "h": 0.3961,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.8254,
+    "y": 0.0635,
+    "row": 4,
+    "col": 52,
+    "h": 0.3967,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.8095,
+    "y": 0.0635,
+    "row": 4,
+    "col": 51,
+    "h": 0.3973,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.7937,
+    "y": 0.0635,
+    "row": 4,
+    "col": 50,
+    "h": 0.3978,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.7778,
+    "y": 0.0635,
+    "row": 4,
+    "col": 49,
+    "h": 0.3984,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.7619,
+    "y": 0.0635,
+    "row": 4,
+    "col": 48,
+    "h": 0.3992,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.7619,
+    "y": 0.0476,
+    "row": 3,
+    "col": 48,
+    "h": 0.4,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  },
+  {
+    "x": 0.7619,
+    "y": 0.0317,
+    "row": 2,
+    "col": 48,
+    "h": 0.4022,
+    "risk_level": 1,
+    "risk_label": "Moderate"
+  }
+]

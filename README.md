@@ -3,7 +3,7 @@
 A **Physics-Informed Neural Network (PINN)** that predicts flood depth, risk zones, and safe evacuation routes for the 26 July 2005 Mumbai flood (944mm/24hr, 400+ deaths, $1B damage).
 
 ## Live Demo
-🌊 **[View Live App](https://your-app.netlify.app)** ← update after deploy
+🌊 **[View Live App](https://hydropinn.netlify.app)**
 
 ## Results
 | Metric | PINN | Plain NN | Winner |
